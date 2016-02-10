@@ -1,0 +1,7 @@
+# REDHOOKBAY specific rules for recovery os
+on early-init
+    insmod /lib/modules/pnwdisp.ko
+    insmod /lib/modules/pvrsgx.ko
+
+on boot
+    insmod /lib/modules/rmi4.ko boot_mode=1
